@@ -1,0 +1,303 @@
+body {
+  font-family: "Bitter", serif;
+}
+
+.heading {
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  margin-bottom: 0;
+  color: #1B1C1E;
+  font-family: "Jost", sans-serif;
+}
+
+/* Marquee Tag */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(128, 98, 98);
+}
+
+.marquee {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 15s linear infinite;
+}
+
+.marquee p {
+  font-size: 18px;
+  color: white;
+  padding: 15px 50px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* banner */
+.banner-image {
+  width: 100%;
+  height: 600px;
+  background: url(storeimg.jpeg) no-repeat center center/cover;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Brands */
+h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.card-img-top {
+  height: 483px;
+  object-fit: cover;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-body {
+  padding-top: 10px;
+}
+
+/* About us */
+.aboutheading {
+  display: flex;
+  justify-content: center;
+}
+
+.cont {
+  background-color: #f8f9fa;
+}
+
+.aboutcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.aboutcontent {
+  line-height: 27px;
+  letter-spacing: 0.1px;
+  font-size: 1.1em;
+}
+
+/* Service */
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.card-text {
+  font-size: 1em;
+  color: #555;
+}
+
+.shop-now-btn {
+  background-color: transparent;
+  color: #DC3545;
+  border: 2px solid #df8d95;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.shop-now-btn:hover {
+  background: linear-gradient(45deg, #df8d95, #DC3545, #df8d95);
+  color: #fff;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  border-color: transparent;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.serimg {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* team */
+
+.team-section {
+  background-color: #f8f9fa;
+}
+
+.team-member {
+  margin-bottom: 2rem;
+}
+
+.team-img {
+  width: 300px;
+  object-fit: cover;
+}
+
+.fw-bold {
+  font-size: 1.6rem;
+}
+
+h4 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.text-danger p {
+  font-size: 1.1rem;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #6c757d;
+  font-size: 1.2rem;
+}
+
+.social-icons a:hover {
+  color: #DC3545;
+}
+
+/* Video */
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.embed-responsive-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* footer */
+.footer {
+  background-color: #000;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #3b1919;
+}
+
+.footer h5,
+.footer h6 {
+  font-weight: bold;
+  color: #fff;
+}
+
+.footer p {
+  color: #bbb;
+}
+
+.footer i {
+  font-size: 1.2rem;
+}
+
+.footer i:hover {
+  color: #a34747;
+}
+
+.hr {
+  border-color: #fff;
+}
+
+/* Media Queries */
+
+/* 360px - 575px */
+@media (min-width:300px) and (max-width: 575px) {
+  .col-md-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heading {
+    font-size: 26px;
+    margin: 10px;
+
+  }
+
+  .mb-4 {
+    margin-bottom: 0;
+  }
+
+  .heading1 {
+    font-weight: 400;
+    font-size: 27px;
+  }
+
+  .cus-btn {
+    font-size: 14px;
+    padding: 7px 2px;
+  }
+
+  .socialicon {
+    margin: 0 auto;
+  }
+
+  .d-flex {
+    flex-direction: column;
+  }
+
+}
+
+
+/* 576px - 768px */
+@media (min-width: 576px) and (max-width: 768px) {
+  .col-md-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/* 769px - 991px */
+@media (min-width: 769px) and (max-width: 991px) {
+  .shop-now-btn {
+    padding: 11px 11px;
+  }
+}

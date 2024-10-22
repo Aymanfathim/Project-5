@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.alert.alert-warning {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.bg {
+    background-image: url(indexbanner.webp);
+    height: 107vh;
+    width: 100%;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+.navicons{
+    height: 20px;
+    margin: 5px;
+}
+.container-fluid a{
+    color: red;
+}
+
+.bg2 {
+    background-image: url(indexbanner2.webp);
+    height: 107vh;
+    width: 100%;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+
+
+.card {
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.2);
+}
+.card img{
+    height: 300px;
+}
+.card-img-top img{
+    height: 500px;
+}

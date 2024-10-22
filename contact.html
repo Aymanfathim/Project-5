@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indo-Western</title>
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Bitter", serif;
+        }
+
+        /* Marquee Tag */
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            background-color: gray;
+            background-color: rgb(128, 98, 98);
+        }
+
+        .marquee {
+            display: flex;
+            white-space: nowrap;
+            animation: scroll 15s linear infinite;
+        }
+
+        .marquee p {
+            font-size: 18px;
+            color: #fff;
+            padding: 15px 50px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .alert {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(52, 56, 60, 0.411);
+            border: none;
+            color: white;
+            border-radius: 0;
+        }
+
+        .bg-dark {
+            background-color: rgb(52, 56, 60);
+        }
+
+        .contact-header {
+            background: url(bannerimage.png) center center/cover;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .vertical {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .heading {
+            font-weight: 600;
+            font-size: 52px;
+            line-height: 100%;
+            letter-spacing: -0.02em;
+            text-transform: capitalize;
+            margin-bottom: 0.5em;
+            color: #0d6efd;
+            font-family: "Jost", sans-serif;
+        }
+
+        .heading1 {
+            font-weight: 600;
+            font-size: 52px;
+            line-height: 100%;
+            letter-spacing: -0.02em;
+            text-transform: capitalize;
+            margin-bottom: 0.5em;
+            color: white;
+            font-family: "Jost", sans-serif;
+        }
+
+        .social-media a {
+            color: rgb(52, 56, 60);
+        }
+
+        .social-media a:hover {
+            color: #0d6efd;
+        }
+
+        .contact-header h1 {
+            font-size: 3rem;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            background-color: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .clrbutton {
+            background-color: rgb(52, 56, 60);
+            border: none;
+        }
+
+        .clrbutton:hover {
+            background-color: #0d6efd;
+            transition: background-color 0.7s ease;
+        }
+
+        .map {
+            width: 100%;
+            height: 400px;
+            background-color: lightgray;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+
+        .faqsection {
+            margin-top: 4em;
+            margin: 0 auto;
+            width: 90%;
+            margin-top: 4em;
+        }
+
+
+        /* footer */
+        .footer {
+            background-color: #000;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #3b1919;
+        }
+
+        .footer h5,
+        .footer h6 {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .footer p {
+            color: #bbb;
+        }
+
+        .footer i {
+            font-size: 1.2rem;
+        }
+
+        .footer i:hover {
+            color: #a34747;
+        }
+
+        .hr {
+            border-color: #fff;
+        }
+        .footstyle li  a :hover {
+            color: red;
+        }
+       .footer-a :hover{
+        color: #a34747;
+       }
+       
+
+        /* Media Queries */
+
+        /* 360px - 575px */
+        @media (min-width:300px) and (max-width: 575px) {
+            .col-md-3 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .heading {
+                font-size: 26px;
+                margin: 10px;
+
+            }
+
+            .contact-info h2 {
+                margin-bottom: 20px;
+                margin: 0 auto;
+                padding-bottom: 1em;
+            }
+            .socialicon{
+                margin: 0 auto;
+            }
+            .d-flex{
+                flex-direction: column;
+            }
+        }
+
+        /* 576px - 768px */
+        @media (min-width: 576px) and (max-width: 768px) {
+            .col-md-3 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .contact-info h2 {
+                margin: 0 auto;
+                padding-bottom: 10px;
+            }
+        }
+
+        /* 769px - 991px */
+        @media (min-width: 769px) and (max-width: 991px) {
+            .contact-info h2 {
+                margin: 0 auto;
+                padding-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><b><img src="clothes-hanger.png" alt="">Indo-Western</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="women.html">Women</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="men.html">Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="marquee-container">
+        <div class="marquee">
+            <p>Welcome to <img src="clothes-hanger.png" alt=""><b>Indowestern!</b> A fusion of Indian and Westernn
+                styles. Explore our latest collection now!
+            </p>
+            <p>New Arrivals! Shop the latest trends in men’s and women’s fashion!</p>
+            <p>Exclusive Discounts for First-Time Shoppers!</p>
+            <p>Free shipping on orders above $50!</p>
+            <p>Enjoy shopping with us</p>
+        </div>
+    </div>
+    <!-- Header -->
+    <section class="contact-header">
+        <div class="container">
+            <h1 class="heading1">Contact Us</h1>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="container contact-info my-5">
+        <div class="row">
+            <div class="col-lg-6 vertical" id="mail">
+                <h2 class="heading">Get in Touch</h2>
+                <p>If you have any questions, feel free to reach out to us. Whether it’s about our latest collections,
+                    size guides, or any other concerns, we’re happy to help.</p>
+                <p> <b>Address</b>: 123 Fashion Street, New York, NY 10001, USA</p>
+                <p> <b>Email</b>: <a href="mailto:info@indo-western.com">info@clothingstore.com</a></p>
+                <p> <b>Phone</b>: <a href="tel:+1234567890">+1 234 567 890</a></p>
+                <p><b>Business Hours</b>: Mon-Fri: 9 AM - 6 PM</p>
+                <div class="social-media mt-4">
+                    <a href="https://facebook.com" class="me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="https://instagram.com" class="me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="https://twitter.com" class="me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="https://youtube.com"><i class="fab fa-youtube fa-2x"></i></a>
+                </div>
+            </div>
+            <!-- Contact Form -->
+            <div class="col-lg-6">
+                <div class="contact-form">
+                    <h3 class="text-center mb-4 heading">Send Us a Message</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label"><b>Full Name</b></label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your full name"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label"><b>Email Address</b></label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email address"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label"><b>Subject</b></label>
+                            <input type="text" class="form-control" id="subject" placeholder="Subject of your message"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label"><b>Message</b></label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Write your message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 clrbutton"><b>Send Message</b></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps or Placeholder -->
+    <h2 class="text-center heading" id="map">Find Us on the Map</h2>
+    <section class="container map">
+
+        <!-- Embed Google Map iframe here -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.716199905229!2d-74.00597248459863!3d40.71277537933037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x123456789abcdef!2sFashion%20Store!5e0!3m2!1sen!2sus!4v1605804921464!5m2!1sen!2sus"
+            width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
+    </section>
+
+
+
+    <!--Section: FAQ-->
+    <section class="faqsection" id="faq">
+        <h3 class="text-center mb-4 pb-2 text-primary fw-bold heading1">FAQ</h3>
+        <p class="text-center mb-5">
+            Find the answers for the most frequently asked questions below
+        </p>
+
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="far fa-paper-plane text-primary pe-2"></i> Is my payment
+                    information secure when making a purchase on your platform?</h6>
+                <p>
+                    <strong><u>Absolutely!</u></strong> We work with top payment companies which guarantees
+                    your
+                    safety and
+                    security. All billing information is stored on our payment processing partner.
+                </p>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fas fa-pen-alt text-primary pe-2"></i> Is there a style guide to
+                    help me choose the right outfit?</h6>
+                <p>
+                    <strong><u>Yes, it is possible!</u></strong> Yes, we offer a style guide with tips and
+                    recommendations for different occasions and body types to help you find the perfect outfit.
+                </p>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fas fa-user text-primary pe-2"></i>Do you offer gift cards?
+                </h6>
+                <p>
+                    Yes, we offer digital gift cards in various amounts that can be redeemed on our website.
+                </p>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fas fa-rocket text-primary pe-2"></i>How do I know what size to
+                    order?
+                </h6>
+                <p>
+                    We recommend reviewing the size guide on each product page to ensure you choose the correct size.
+                </p>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fas fa-home text-primary pe-2"></i>What are the most popular
+                    items this season?
+                </h6>
+                <p>Check our <strong><u>Best Seller</u></strong> or <strong><u>Trending now</u></strong> sections for a
+                    curated selection of this season’s must-have items.</p>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fas fa-book-open text-primary pe-2"></i>What is your
+                    return/exchange policy?</h6>
+                <p>
+                    We offer returns and exchanges within 30 days of receiving your order. Items must be unworn,
+                    unwashed, and in their original packaging
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5 class="mb-3"><img src="clothes-hanger.png" alt=""></h5>
+                    <b>
+                        <p>INDO-WESTERN </p>
+                    </b>
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h6>Men's Collections</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="men.html#casualwear" class="text-light">Casual Wear</a></li>
+                                <li><a href="men.html#suitsnblazer" class="text-light">Suit's & Blazer</a></li>
+                                <li><a href="men.html#jackectnhoody" class="text-light">Jacket & Hoody</a></li>
+                                <li><a href="men.html#tshirtnjeans" class="text-light">T-shirt & Jeans</a></li>
+                                <li><a href="men.html#traditionalwear" class="text-light">Traditional Wear</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h6>Women's collection</h6>
+                            <ul class="list-unstyled  footstyle">
+                                <li><a href="women.html#formalwear" class="text-light footer-a">Formal Wear</a></li>
+                                <li><a href="women.html#ethnicwear" class="text-light">Ethnic Wear</a></li>
+                                <li><a href="women.html#sportswear" class="text-light">Sports Wear</a></li>
+                                <li><a href="women.html#westernwear" class="text-light">Western Wear</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h6>Company</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="contact.html#faq" class="text-light">Pre-Sale FAQs</a></li>
+                                <li><a href="index.html#abtus" class="text-light">About Us</a></li>
+                                <li><a href="index.html#service" class="text-light">Our Services</a></li>
+                                <li><a href="index.html#vid" class="text-light">Our Video</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h6>Explore</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="contact.html#mail" class="text-light">Mail Us</a></li>
+                                <li><a href="contact.html#map" class="text-light">Our Location</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="socialicon">
+                    <a href="#"><i class="fab fa-facebook-f text-light"></i></a>
+                    <a href="#" class="mx-2"><i class="fab fa-twitter text-light"></i></a>
+                    <a href="#"><i class="fab fa-google-plus-g text-light"></i></a>
+                    <a href="#" class="mx-2"><i class="fab fa-instagram text-light"></i></a>
+                </div>
+                <p class="mb-0">©2024 INDO-WESTERN. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap 5.3.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
