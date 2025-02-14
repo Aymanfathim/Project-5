@@ -141,15 +141,118 @@ a.cus-btn.bordered {
     margin-top: 1em;
 }
 
+/* Testimonial */
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+
+.Testimonial-container {
+    transition: all 0.3s ease-out;
+}
+
+.Testimonial-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h3 {
+    text-align: center;
+    color: #262626;
+    font-size: 25px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+p {
+    color: #666666;
+    line-height: 1.5em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 1em;
+
+    &.small {
+        font-size: 17px;
+    }
+}
+
+.go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background-color: #e3baab;
+    border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: white;
+    font-family: courier, sans;
+}
+
+.Testimonial-card {
+    display: block;
+    position: relative;
+    width: 85%;
+    background-color: #f2f8f9;
+    border-radius: 25px;
+    padding: 32px 24px;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -16px;
+        right: -16px;
+        background: #e3baab;
+        height: 32px;
+        width: 32px;
+        border-radius: 32px;
+        transform: scale(1);
+        transform-origin: 95% 24%;
+        transition: transform 0.25s ease-out;
+    }
+
+    &:hover:before {
+        transform: scale(21);
+    }
+}
+
+.Testimonial-card:hover {
+    p {
+        transition: all 0.3s ease-out;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    h3 {
+        transition: all 0.3s ease-out;
+        color: #ffffff;
+    }
+}
+
+#testimonial-img {
+    display: block;
+    margin: 0 auto;
+}
+
+
 
 .testimonials {
     background-color: #f9fafc;
-}
-
-.testimonial-card {
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(4, 4, 4, 0.1);
-    background-color: #fff;
 }
 
 .headsec {
@@ -197,57 +300,21 @@ a.cus-btn.bordered {
     border-color: transparent;
 }
 
-.card.testimonial-card.p-4 {
-    width: 90%;
-    display: flex;
-    gap: 2em;
-    height: 380px;
-}
 
-img.testimonialside {
-    position: absolute;
-    left: 0px;
-}
 
 h5.test {
     margin: 0 auto;
     color: #dc3545;
 }
 
-.rounded-circle {
-    margin: 0 auto;
-    height: 100px;
-    width: 100px;
-    position: relative;
-    right: 1em;
-}
 
-.icon-bg {
-    background-color: #f7d4cf;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-text {
-    line-height: 1.5em;
-    font-weight: 600;
-    letter-spacing: 1px;
-    font-size: 1em;
-    color: #6c757dcc;
-}
 
 .bi-quote {
     font-size: 24px;
     color: #fff;
 }
 
-.card-title {
-    font-weight: bold;
-}
+
 
 /* new */
 .shop-now-btn {
@@ -345,7 +412,7 @@ img.card-img-top {
 }
 
 .ethnic:hover .card-img-top {
-    transform: scale(1.1);
+    transform: scale(1.06);
 }
 
 .ethnic img {
@@ -451,10 +518,12 @@ img.card-img-top {
         padding: 8px 8px;
     }
 
-    .card.testimonial-card.p-4 {
-        width: 99%;
-        height: 455px;
-        margin-top: 10px;
+    .Testimonial-container {
+        flex-direction: column;
+    }
+
+    .Testimonial-card {
+        width: 95%;
     }
 
     .col-md-3 {
@@ -499,12 +568,12 @@ img.card-img-top {
         font-size: 25px;
     }
 
-    .card.testimonial-card.p-4 {
-        margin-bottom: 10px;
+    .Testimonial-container {
+        flex-direction: column;
     }
 
     .shop-now-btn {
-        padding: 9px 10px;
+        padding: 11px 3px;
     }
 
     .card.trans {
@@ -538,8 +607,7 @@ img.card-img-top {
         font-size: 35px;
     }
 
-    .card.testimonial-card.p-4 {
-        height: 445px;
+    .Testimonial-card {
         width: 100%;
     }
 }
